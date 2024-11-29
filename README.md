@@ -1,1 +1,0 @@
-# smartfarm_project_service_backend_part

@@ -1,0 +1,120 @@
+[
+    { "Id": 1, "TypeCode": "Hardware", "Value": "Arduino", "Level": 1 },
+    { "Id": 2, "TypeCode": "Hardware", "Value": "Sensor", "Level": 1 },
+    { "Id": 3, "TypeCode": "Hardware", "Value": "Actuator", "Level": 1 },
+    { "Id": 4, "TypeCode": "Crop", "Value": "Leafy Greens", "Level": 1 },
+    { "Id": 5, "TypeCode": "Crop", "Value": "Fruits", "Level": 1 },
+    { "Id": 6, "TypeCode": "Crop", "Value": "Flowers", "Level": 1 },
+    
+    { "Id": 7, "TypeCode": "Arduino", "Value": "Arduino Uno", "Level": 2 },
+    { "Id": 8, "TypeCode": "Arduino", "Value": "Arduino Mega", "Level": 2 },
+    { "Id": 9, "TypeCode": "Arduino", "Value": "Arduino Nano", "Level": 2 },
+    { "Id": 10, "TypeCode": "Arduino", "Value": "Arduino Leonardo", "Level": 2 },
+  
+    { "Id": 11, "TypeCode": "Sensor", "Value": "Temperature Sensor", "Level": 2 },
+    { "Id": 12, "TypeCode": "Sensor", "Value": "Humidity Sensor", "Level": 2 },
+    { "Id": 13, "TypeCode": "Sensor", "Value": "Pressure Sensor", "Level": 2 },
+    { "Id": 14, "TypeCode": "Sensor", "Value": "Light Sensor", "Level": 2 },
+    { "Id": 15, "TypeCode": "Sensor", "Value": "Proximity Sensor", "Level": 2 },
+  
+    { "Id": 16, "TypeCode": "Temperature Sensor", "Value": "DHT11", "Level": 3 },
+    { "Id": 17, "TypeCode": "Temperature Sensor", "Value": "DHT22", "Level": 3 },
+    { "Id": 18, "TypeCode": "Temperature Sensor", "Value": "LM35", "Level": 3 },
+    { "Id": 19, "TypeCode": "Temperature Sensor", "Value": "TMP36", "Level": 3 },
+  
+    { "Id": 20, "TypeCode": "Humidity Sensor", "Value": "HS1101", "Level": 3 },
+    { "Id": 21, "TypeCode": "Humidity Sensor", "Value": "AM2301", "Level": 3 },
+  
+    { "Id": 22, "TypeCode": "Pressure Sensor", "Value": "BMP180", "Level": 3 },
+    { "Id": 23, "TypeCode": "Pressure Sensor", "Value": "BMP280", "Level": 3 },
+  
+    { "Id": 24, "TypeCode": "Light Sensor", "Value": "LDR", "Level": 3 },
+    { "Id": 25, "TypeCode": "Light Sensor", "Value": "TSL2561", "Level": 3 },
+  
+    { "Id": 26, "TypeCode": "Proximity Sensor", "Value": "IR Proximity Sensor", "Level": 3 },
+    { "Id": 27, "TypeCode": "Proximity Sensor", "Value": "Ultrasonic Sensor", "Level": 3 },
+  
+    { "Id": 28, "TypeCode": "Actuator", "Value": "Relay", "Level": 2 },
+    { "Id": 29, "TypeCode": "Actuator", "Value": "DC Motor", "Level": 2 },
+    { "Id": 30, "TypeCode": "Actuator", "Value": "Servo Motor", "Level": 2 },
+    { "Id": 31, "TypeCode": "Actuator", "Value": "Stepper Motor", "Level": 2 },
+  
+    { "Id": 32, "TypeCode": "Relay", "Value": "5V Relay", "Level": 3 },
+    { "Id": 33, "TypeCode": "Relay", "Value": "12V Relay", "Level": 3 },
+  
+    { "Id": 34, "TypeCode": "DC Motor", "Value": "Standard DC Motor", "Level": 3 },
+    { "Id": 35, "TypeCode": "DC Motor", "Value": "High Torque DC Motor", "Level": 3 },
+  
+    { "Id": 36, "TypeCode": "Servo Motor", "Value": "SG90", "Level": 3 },
+    { "Id": 37, "TypeCode": "Servo Motor", "Value": "MG995", "Level": 3 },
+  
+    { "Id": 38, "TypeCode": "Stepper Motor", "Value": "28BYJ-48", "Level": 3 },
+    { "Id": 39, "TypeCode": "Stepper Motor", "Value": "NEMA17", "Level": 3 },
+  
+    { "Id": 40, "TypeCode": "Leafy Greens", "Value": "Lettuce", "Level": 2 },
+    { "Id": 41, "TypeCode": "Leafy Greens", "Value": "Spinach", "Level": 2 },
+    { "Id": 42, "TypeCode": "Leafy Greens", "Value": "Kale", "Level": 2 },
+  
+    { "Id": 43, "TypeCode": "Fruits", "Value": "Tomato", "Level": 2 },
+    { "Id": 44, "TypeCode": "Fruits", "Value": "Strawberry", "Level": 2 },
+  
+    { "Id": 45, "TypeCode": "Flowers", "Value": "Rose", "Level": 2 },
+    { "Id": 46, "TypeCode": "Flowers", "Value": "Tulip", "Level": 2 },
+    { "Id": 47, "TypeCode": "Flowers", "Value": "Sunflower", "Level": 2 },
+  
+    { "Id": 48, "TypeCode": "Irrigation System", "Value": "Drip Irrigation", "Level": 2 },
+    { "Id": 49, "TypeCode": "Irrigation System", "Value": "Sprinkler Irrigation", "Level": 2 },
+  
+    { "Id": 50, "TypeCode": "Soil Type", "Value": "Loam", "Level": 2 },
+    { "Id": 51, "TypeCode": "Soil Type", "Value": "Sandy", "Level": 2 },
+    { "Id": 52, "TypeCode": "Soil Type", "Value": "Clay", "Level": 2 },
+  
+    { "Id": 53, "TypeCode": "Light Source", "Value": "LED Grow Light", "Level": 2 },
+    { "Id": 54, "TypeCode": "Light Source", "Value": "Fluorescent Light", "Level": 2 },
+    { "Id": 55, "TypeCode": "Light Source", "Value": "HID Light", "Level": 2 },
+  
+    { "Id": 56, "TypeCode": "Water Pump", "Value": "Submersible Pump", "Level": 2 },
+    { "Id": 57, "TypeCode": "Water Pump", "Value": "Centrifugal Pump", "Level": 2 },
+  
+    { "Id": 58, "TypeCode": "Power Source", "Value": "Solar Panel", "Level": 2 },
+    { "Id": 59, "TypeCode": "Power Source", "Value": "Battery", "Level": 2 },
+  
+    { "Id": 60, "TypeCode": "Data Storage", "Value": "Local Storage", "Level": 2 },
+    { "Id": 61, "TypeCode": "Data Storage", "Value": "Cloud Storage", "Level": 2 },
+  
+    { "Id": 62, "TypeCode": "Communication Protocol", "Value": "Wi-Fi", "Level": 2 },
+    { "Id": 63, "TypeCode": "Communication Protocol", "Value": "Bluetooth", "Level": 2 },
+    { "Id": 64, "TypeCode": "Communication Protocol", "Value": "Zigbee", "Level": 2 },
+  
+    { "Id": 65, "TypeCode": "Automation", "Value": "PID Controller", "Level": 2 },
+    { "Id": 66, "TypeCode": "Automation", "Value": "Fuzzy Logic", "Level": 2 },
+  
+    { "Id": 67, "TypeCode": "Climate Control", "Value": "HVAC", "Level": 2 },
+    { "Id": 68, "TypeCode": "Climate Control", "Value": "Dehumidifier", "Level": 2 },
+  
+    { "Id": 69, "TypeCode": "Fertilizer Type", "Value": "Nitrogen Fertilizer", "Level": 2 },
+    { "Id": 70, "TypeCode": "Fertilizer Type", "Value": "Phosphorus Fertilizer", "Level": 2 },
+  
+    { "Id": 71, "TypeCode": "Pesticide Type", "Value": "Insecticide", "Level": 2 },
+    { "Id": 72, "TypeCode": "Pesticide Type", "Value": "Herbicide", "Level": 2 },
+  
+    { "Id": 73, "TypeCode": "Nutrient Solution", "Value": "Hydroponic Nutrient", "Level": 2 },
+    { "Id": 74, "TypeCode": "Nutrient Solution", "Value": "Soil Nutrient", "Level": 2 },
+  
+    { "Id": 75, "TypeCode": "Water Type", "Value": "Tap Water", "Level": 2 },
+    { "Id": 76, "TypeCode": "Water Type", "Value": "Rainwater", "Level": 2 },
+    { "Id": 77, "TypeCode": "Water Type", "Value": "Distilled Water", "Level": 2 },
+  
+    { "Id": 78, "TypeCode": "Container Type", "Value": "Pot", "Level": 2 },
+    { "Id": 79, "TypeCode": "Container Type", "Value": "Tray", "Level": 2 },
+  
+    { "Id": 80, "TypeCode": "Air Quality", "Value": "CO2 Levels", "Level": 2 },
+    { "Id": 81, "TypeCode": "Air Quality", "Value": "Oxygen Levels", "Level": 2 },
+
+    { "Id": 100, "TypeCode": "Facility", "Value": "Lighting", "Level": 1 },
+    { "Id": 101, "TypeCode": "Facility", "Value": "Ventilation", "Level": 1 },
+    { "Id": 102, "TypeCode": "Facility", "Value": "Water Supply", "Level": 1 },
+    { "Id": 103, "TypeCode": "Facility", "Value": "Heating", "Level": 1 },
+    { "Id": 104, "TypeCode": "Facility", "Value": "Cooling", "Level": 1 }
+  ]
+  

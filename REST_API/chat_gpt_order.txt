@@ -1,0 +1,19 @@
+1. ERD to model file 명령어
+   [
+    
+    다음과 같은 ERD 모델이 있어. 이걸 모델 파일로 변환해줘.
+    1. user 테이블 : id ( pk ), name, address, phone_number, password, deposit_amount, created_at, updated_at
+    2. farm 테이블 : id, name, farm_manager_id, crop_type_id, farm_type_id, created_at, updated_at
+    3. farm_manager 테이블 : id, name, user_id, address, phone_number, password, created_at, updated_at
+    4. farm_unit 테이블 : id, name, farm_unit_price, created_at, updated_at
+    5. farm_units 테이블 : id, farm_id, farm_unit_id, position_description, created_at, updated_at
+    6. user_farm_units : id, user_id, farm_unit_id, created_at
+    7. farm_sales_offer : id, farm_unit_id, transaction_status, created_at, updated_at
+    8. farm_sale_order : id, farm_sale_offer_id, user_id, approval_status, created_at, updated_at
+    9. farm_type : id, name, property_1, property_1_description, created_at, updated_at
+    10 crop_type : id, name, property_1, property_1_description, created_at, updated_at
+
+    _id 앞의 단어는 테이블 이름이야. 딱 보면 알겠지만 _id는 foreign key다. 
+    이걸 모델 파일로 짜봐 
+    
+    ] 

@@ -1,0 +1,82 @@
+1. 폴더 구조
+/REST_API
+│
+├── /Controllers        # API 엔드포인트를 정의하는 컨트롤러 클래스들
+│
+├── /Models             # 데이터 모델 클래스들
+│
+├── /Services           # 비즈니스 로직을 처리하는 서비스 클래스들
+|
+├── /Db               # Db 상호작용 관련 클래스들
+│   └── Migrations    # migration 관련 파일들
+│
+├── /appsettings.json   # 애플리케이션 설정 파일
+├── /Program.cs         # 메인 프로그램 파일
+└── /Startup.cs         # 애플리케이션 설정 및 미들웨어 설정
+
+2. dotnet 종속성 설치
+ 2.1 마이그레이션 도구 설치
+ - dotnet tool install --global dotnet-ef
+ 2.2 ORM 및 DB 관련 도구 설치
+ - dotnet add package Microsoft.EntityFrameworkCore
+ - dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+ - dotnet add package Microsoft.EntityFrameworkCore.Tools
+ - dotnet add package Pomelo.EntityFrameworkCore.MySql
+ 2.3 단위 테스트 관련 도구 설치
+ - dotnet add package xUnit
+ - dotnet add package Moq
+ - dotnet add package Microsoft.EntityFrameworkCore.InMemory
+ 2.4 기타 도구 설치
+ - dotnet add package Newtonsoft.Json --version 13.0.1
+ - dotnet add package Microsoft.NET.Test.Sdk --version 17.11.0
+ 
+ - dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+ - dotnet add package System.IdentityModel.Tokens.Jwt
+
+2.3 비밀번호 해싱 도구
+- dotnet add package BCrypt.Net-Next
+
+3. 마이그레이션 방법 ( 터미널로 해아함. )
+ 3.1 마이그레이션 추가
+  3.1.1 dev 모드
+   - dotnet ef migrations add <migration_name> -o Db/Migrations
+   - ex) dotnet ef migrations add InitialMigrate -o Db/Migrations
+ 3.2 데이터 베이스 업데이트
+   3.2.1 dev 모드
+   - dotnet ef database update 
+ 3.3 특정 마이그레이션으로 롤백
+  - dotnet ef database update <MigrationName>
+ 3.4 마이그레이션 제거https://api.nuget.org/v3/index.json
+  - dotnet ef migrations remove
+ 3.5 db 모델 변경 마이그레이션
+  - dotnet ef migrations add UpdateFarmManagerModel
+ 3.6 db 제거
+  - dotnet ef database drop
+  - dotnet ef database update
+
+4. 배포시 주의할점
+  - 해당 코드는 시스템 환경 변수에 따라 dev, live로 변경됨.
+  - 시스템 환경 변수 ASPNETCORE_ENVIRONMENT 를 변경해야하며, 
+  - 리눅스는 다음과 같은 명령어를 실행함. ( live의 경우 Development를 Live로 변경 필요.)
+  - export ASPNETCORE_ENVIRONMENT=Development 
+  - 윈도우는 다음과 같은 명령어를 실행함.
+  - setx ASPNETCORE_ENVIRONMENT "Development"
+
+5. 빌드 방법
+  5.1 빌드
+    - dotnet build REST_API.csproj
+  5.2 실행
+    - dotnet run REST_API.csproj
+  5.3 배포
+    - dotnet publish -c Release -o ./publish
+  5.4 배포 실행
+    - dotnet ./publish/REST_API.dll
+
+5. 테스트 방법
+   
+  5.1 단위 테스트
+    - dotnet test
+  5.2 통합 테스트
+    - dotnet run
+    - Postman을 이용하여 API 테스트
+    - https://www.getpostman.com/downloads/

@@ -1,0 +1,40 @@
+services:
+  postgres-db:
+    image: postgres:14
+    container_name: my_postgres_db
+    environment:
+      POSTGRES_USER: ${DB_USER}         # 외부 환경 변수에서 가져옴
+      POSTGRES_PASSWORD: ${DB_PASSWORD} # 외부 환경 변수에서 가져옴
+      POSTGRES_DB: ${DB_NAME}             # 외부 환경 변수에서 가져옴
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+    restart: always
+
+  dotnet-server:
+    container_name: my_dotnet_server
+    build:
+      context: ./REST_API
+      dockerfile: DockerFile
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres-db
+    networks:
+      - my_network
+    command: ["dotnet","myapp.dll"]
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  my_network:
+    driver: bridge
