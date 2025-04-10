@@ -32,6 +32,38 @@ services:
     command: ["dotnet","myapp.dll"]
     restart: unless-stopped
 
+  nodejs-server:
+    container_name: my_nodejs_server
+    build:
+      context: ./NODE_API
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres-db
+    networks:
+      - my_network
+    command: ["npm", "start"]
+    restart: unless-stopped
+
+  react-client:
+    container_name: my_react_client
+    build:
+      context: ./REACT_APP
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - dotnet-server
+      - nodejs-server
+    networks:
+      - my_network
+    restart: unless-stopped
+
 volumes:
   postgres_data:
 
